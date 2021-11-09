@@ -112,41 +112,43 @@
                           <th>Thao tác</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>A20</td>
-                          <td>Chó phốc sơn</td>
-                          <td>7</td>
-                          <td>Vàng</td>
-                          <td>Đực</td>
-                          <td>12000</td>
-                          <td>30000</td>
-                          <td>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm"
-                              title="View"
-                            >
-                              <i class="fa fa-eye"></i>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm"
-                              title="Edit"
-                            >
-                              <i class="fa fa-edit"></i>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm js-sweetalert"
-                              title="Delete"
-                              data-type="confirm"
-                            >
-                              <i class="fa fa-trash text-danger"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
+                        <?php foreach ($data['product'] as $data):?>
+                          <tbody>
+                            <tr>
+                              <td><?= $data['product_id'] ?></td>
+                              <td><?= $data['name'] ?></td>
+                              <td><?= $data['count'] ?></td>
+                              <td><?= $data['color'] ?></td>
+                              <td><?= $data['type'] ?></td>
+                              <td><?= $data['old_price'] ?></td>
+                              <td><?= $data['new_price'] ?></td>
+                              <td>
+                                <button
+                                  type="button"
+                                  class="btn btn-icon btn-sm"
+                                  title="View"
+                                >
+                                  <i class="fa fa-eye"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-icon btn-sm"
+                                  title="Edit"
+                                >
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-icon btn-sm js-sweetalert"
+                                  title="Delete"
+                                  data-type="confirm"
+                                >
+                                  <i class="fa fa-trash text-danger"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        <?php endforeach; ?>
                     </table>
                   </div>
                 </div>

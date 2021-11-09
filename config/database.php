@@ -4,5 +4,5 @@
         'host' => 'localhost',
         'user' => 'root',
         'password' => '',
-        'dbname'=> 'banhangrty'
+        'dbname'=> 'shoppet'
     ];

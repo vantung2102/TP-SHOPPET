@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Admin</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap"
@@ -38,11 +38,11 @@
     <link href="<?= load_css('admin') ?>" rel="stylesheet" />
   </head>
   <body>
-    <div class="loader">
+    <!-- <div class="loader">
       <div class="spinner-grow text-primary" role="status">
         <span class="sr-only"></span>
       </div>
-    </div>
+    </div> -->
     <div class="connect-container align-content-stretch d-flex flex-wrap">
       <div class="page-sidebar">
         <div class="logo-box">
@@ -59,7 +59,7 @@
           <ul class="accordion-menu">
             <li class="sidebar-title">BẢNG ĐIỀU KHIỂN</li>
             <li class="active-page">
-              <a href="<?= base_url('admin/pet') ?>" class="active">
+              <a href="<?= base_url('admin/admin') ?>" class="active">
                 <i class="material-icons-outlined">pets</i>THÚ CƯNG
               </a>
             </li>
@@ -250,6 +250,14 @@
             </div>
           </nav>
         </div>
+
+        <?php
+
+          // if(!isset($_SESSION['id']) || !isset($_SESSION['email']))
+          // {
+          //   redirect('admin/admin');
+          // }
+        ?>
 
         <?= $NoiDung; ?>
       </div>

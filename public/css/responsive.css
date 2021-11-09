@@ -37,6 +37,26 @@
     box-shadow: 0 5px 5px rgb(0 0 0 / 20%);
   }
 
+  /*-Sap xep san pham-*/
+  .products__container {
+    margin-top: calc(var(--header-height) + 70px);
+  }
+  .products__container-title-text {
+    padding-top: 24px;
+  }
+  .products__container .home-filter {
+    display: none;
+  }
+
+  .products__container-header .header__sort-bar {
+    display: flex;
+  }
+
+  .header__sort-list {
+    display: flex;
+  }
+  /* END _ SAP XEP SAN PHAM*/
+
   /* review */
   .review__users {
     display: flex;
@@ -180,6 +200,11 @@
   .product-price span.old {
     font-size: 2rem;
     letter-spacing: 0.1rem;
+  }
+
+  /* Product.html*/
+  .detail-product__information .product-detail__illustration {
+    padding: 8px 0px;
   }
 
   /* review */
@@ -467,10 +492,22 @@
     height: 510px;
   }
 
-  /* .review__users::-webkit-scrollbar {
-    display: none;
-  } */
+  /*-----detail products------*/
 
+  .product-detail__illustration-share-link {
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  .product-detail__illustration-like {
+    flex-wrap: wrap;
+    line-height: 1.2;
+  }
+  .product-detail__illustration-like-sperate {
+    display: none;
+  }
+  /*END DETAIL PRODUCT--*/
   .user-info__content-name {
     font-size: 1.6rem;
   }

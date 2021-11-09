@@ -87,48 +87,47 @@
                           <th>Tên khách hàng</th>
                           <th>SĐT</th>
                           <th>Email</th>
-                          <th>Năm sinh</th>
                           <th>Địa chỉ</th>
-                          <th>Đơn hàng đã đặt</th>
                           <th>Thao tác</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>Tô Thanh Tâm</td>
-                          <td>0999999999</td>
-                          <td>tamngu@gmail.com</td>
-                          <td>21/02/2001</td>
-                          <td>
-                            <span>ggggggggggggggggggggggggggg</span>
-                          </td>
-                          <td>7</td>
-                          <td>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm"
-                              title="View"
-                            >
-                              <i class="fa fa-eye"></i>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm"
-                              title="Edit"
-                            >
-                              <i class="fa fa-edit"></i>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm js-sweetalert"
-                              title="Delete"
-                              data-type="confirm"
-                            >
-                              <i class="fa fa-trash text-danger"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
+
+                      <?php foreach($data['user'] as $data): ?>
+                        <tbody>
+                          <tr>
+                            <td><?= $data['name'] ?></td>
+                            <td><?= $data['phone'] ?></td>
+                            <td><?= $data['email'] ?></td>
+                            <td>
+                              <span><?= $data['address'] ?></span>
+                            </td>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn btn-icon btn-sm"
+                                title="View"
+                              >
+                                <i class="fa fa-eye"></i>
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-icon btn-sm"
+                                title="Edit"
+                              >
+                                <i class="fa fa-edit"></i>
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-icon btn-sm js-sweetalert"
+                                title="Delete"
+                                data-type="confirm"
+                              >
+                                <i class="fa fa-trash text-danger"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      <?php endforeach; ?>
                     </table>
                   </div>
                 </div>

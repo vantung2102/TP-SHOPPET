@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="<?= load_css('grid') ?>" />
     <link rel="stylesheet" href="<?= load_css('base') ?>" />
     <link rel="stylesheet" href="<?= load_css('main') ?>" />
+    <link rel="stylesheet" href="<?= load_css('products') ?>" />
     <link rel="stylesheet" href="<?= load_css('responsive') ?>" />
 <body>
     <div class="app">
@@ -125,7 +126,7 @@
                 <div class="col l-2 m-6 c-7">
                     <div class="header__nav-logo">
                     <a href="<?= base_url('home/index') ?>">
-                        <img src="<?= load_images('icon','logo.png')?>" alt="" />
+                        <img src="<?= load_images('pet','logo.png')?>" alt="" />
                     </a>
                     </div>
                 </div>

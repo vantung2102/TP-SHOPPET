@@ -9,28 +9,85 @@
             $this->model->load_model('admin','admin');
         }
 
-        function pet(){
-            $this->view->load_view('admin/pet');
+        function login(){
+            $this->layout->setLayout('adminLoginDefault');
+            $this->view->load_view('admin/login');
+        }
+
+        function processLogin() {
+
+            if(empty($_POST['email']) || empty($_POST['password']))
+            {
+                redirect('admin/login?failure=0');
+            }  
+            else
+            {
+                $data = [
+                    'email'=> $_POST['email'],
+                    'password'=> $_POST['password']
+                ];
+
+                $check = $this->model->admin->checkAdminExist($data);
+
+                if($check == false) {
+                    redirect('admin/login?failure=1');
+                }
+                else{
+                    $_SESSION['id'] = $check['id'];
+
+                    $_COOKIE['id'] = $check['id'];
+                    $_COOKIE['email'] = $check['email'];
+                    
+                    setcookie($_COOKIE['id'], $_COOKIE['email'], time() + 2*60*60, '/');
+                    redirect('admin/admin'); 
+                }
+            }
+        }
+
+        function logout(){
+            session_destroy();
+            redirect('admin/login');
+        }  
+
+        function admin(){
+            $data = [
+                'pets' => $this->model->admin->loadDataPet(),
+            ];
+            $this->view->load_view('admin/admin', $data);
         }  
 
         function user() {
-            $this->view->load_view('admin/user');
+            $data = [
+                'user' => $this->model->admin->loadDataUser(),
+            ];
+            $this->view->load_view('admin/user', $data);
         } 
         
         function product() {
-            $this->view->load_view('admin/product');
-        } 
-
-        function mail() {
-            $this->view->load_view('admin/mail');
+            $data = [
+                'product' => $this->model->admin->loadDataProduct(),
+            ];
+            $this->view->load_view('admin/product', $data);
         } 
 
         function order() {
-            $this->view->load_view('admin/order');
+            if(isset($_COOKIE['id']) && isset($_COOKIE['email']))
+            {
+                $this->view->load_view('admin/order');
+            } 
+            else {
+                redirect('admin/login');
+            }
         } 
 
         function orderDetail() {
-            $this->view->load_view('admin/orderDetail');
+            if(isset($_COOKIE['id']) && isset($_COOKIE['email']))
+            {
+                $this->view->load_view('admin/orderDetail');
+            } 
+            else {
+                redirect('admin/adminLogin');
+            }
         } 
 
         function category() {
