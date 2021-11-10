@@ -215,6 +215,7 @@
   background-position: center;
 }
 .category-products-item__name {
+  width: 290px;
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.8rem;

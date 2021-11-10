@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="<?= load_css('grid') ?>" />
     <link rel="stylesheet" href="<?= load_css('base') ?>" />
     <link rel="stylesheet" href="<?= load_css('main') ?>" />
+    <link rel="stylesheet" href="<?= load_css('detail_product') ?>" />
     <link rel="stylesheet" href="<?= load_css('products') ?>" />
     <link rel="stylesheet" href="<?= load_css('responsive') ?>" />
 <body>
@@ -608,7 +609,7 @@
                 <div class="footer-top-widget">
                   <div class="footer-top-widget__logo">
                     <a href="">
-                      <img src="./assets/img/logo.png" alt="" />
+                      <img src="<?= load_images('pet', 'logo.png') ?>" alt="" />
                     </a>
                   </div>
                   <p class="footer-top-widget__info">

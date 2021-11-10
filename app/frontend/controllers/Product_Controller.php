@@ -4,13 +4,13 @@
 
         function __construct(){
             parent::__construct();
-            $this->model->load_model('product','product');
+            $this->model->load_model('pet','pet');
             $this->model->load_model('admin','admin');
         }
 
         function product(){
             $data = [
-                'pet'=>$this->model->admin->loadDataPet()
+                'product'=>$this->model->admin->loadDataProduct()
             ];
             $this->view->load_view('product/product', $data);
         }

@@ -38,11 +38,11 @@
     <link href="<?= load_css('admin') ?>" rel="stylesheet" />
   </head>
   <body>
-    <!-- <div class="loader">
+    <div class="loader">
       <div class="spinner-grow text-primary" role="status">
         <span class="sr-only"></span>
       </div>
-    </div> -->
+    </div>
     <div class="connect-container align-content-stretch d-flex flex-wrap">
       <div class="page-sidebar">
         <div class="logo-box">
@@ -209,7 +209,7 @@
                   >
                   <a class="dropdown-item" href="#">Cài đặt</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Đăng xuất</a>
+                  <a href="<?= base_url('admin/logout')?>" class="dropdown-item" href="#">Đăng xuất</a>
                 </div>
               </li>
               <li class="nav-item">

@@ -8,3 +8,33 @@ activeLis.forEach((activeLi) => {
     console.log(00);
   };
 });
+
+// amount product
+function plus() {
+  var quanty = document.getElementById("amount").value;
+  document.getElementById("amount").value = parseInt(quanty) + 1;
+}
+
+function minus() {
+  var quanty = document.getElementById("amount").value;
+  if (parseInt(quanty) > 1) {
+    document.getElementById("amount").value = parseInt(quanty) - 1;
+  }
+}
+
+// Select image
+function changeImage(id) {
+  let imagePath = document.getElementById(id).getAttribute("src");
+  console.log(imagePath);
+  document.getElementById("img-main").setAttribute("src", imagePath);
+}
+
+// Like and dislike
+var heartvar = document.getElementById("heart");
+function like() {
+  if (heartvar.style.color == "red") {
+    heartvar.style.color = "grey";
+  } else {
+    heartvar.style.color = "red";
+  }
+}

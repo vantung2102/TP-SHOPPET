@@ -5,7 +5,7 @@
     <div class="slide-banner__text slide-banner__text2">
       <h2 class="slide-banner__title-1">Welcome to</h2>
       <h2 class="slide-banner__title-2">TP & SHOPPET</h2>
-      <p class="slide-banner__description banner-detail">Product</p>
+      <p class="slide-banner__description banner-detail">Pets</p>
     </div>
   </div>
 </div>
@@ -39,46 +39,46 @@
     <div class="grid wide">
       <div class="row">
 
-      <?php foreach($data['pet'] as $data): ?>
+        <?php foreach($data['pet'] as $key): ?>
 
-        <div class="col l-3 m-6 c-12">
-          <div class="category-products-item">
-            <div
-              class="category-products-item__img"
-              style="
-                background-image: url(<?= load_images('pet', $data['img']) ?>);
-              "
-            ></div>
-            <h4 class="category-products-item__name">
-              <?= $data['name'] ?>
-            </h4>
-            <div class="category-products-item__price">
-              <span class="category-products-item__price-old"><?= $data['old_price'] ?></span>
-              <span class="category-products-item__price-new"><?= $data['new_price'] ?></span>
-            </div>
-            <div class="category-products-item__action">
-              <div class="product-evaluate">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+          <div class="col l-3 m-6 c-12">
+            <div class="category-products-item">
+              <div
+                class="category-products-item__img"
+                style="
+                  background-image: url(<?= load_images('pet', $key['img']) ?>);
+                "
+              ></div>
+              <h4 class="category-products-item__name">
+                <?= $key['name'] ?>
+              </h4>
+              <div class="category-products-item__price">
+                <span class="category-products-item__price-old"><?= $key['old_price'] ?></span>
+                <span class="category-products-item__price-new"><?= $key['new_price'] ?></span>
               </div>
-              <a href="#" class="category-products-item__detail">Chi tiết</a>
-            </div>
+              <div class="category-products-item__action">
+                <div class="product-evaluate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="category-products-item__detail">Chi tiết</a>
+              </div>
 
-            <div class="product-favourite">
-              <i class="fas fa-check"></i>
-              <span>HOT NEW</span>
-            </div>
-            <div class="product-sale-off">
-              <span class="product-percent">10%</span>
-              <span class="product-label">Giảm</span>
+              <div class="product-favourite">
+                <i class="fas fa-check"></i>
+                <span>HOT NEW</span>
+              </div>
+              <div class="product-sale-off">
+                <span class="product-percent">10%</span>
+                <span class="product-label">Giảm</span>
+              </div>
             </div>
           </div>
-        </div>
 
-      <?php endforeach; ?>
+        <?php endforeach; ?>
       </div>
 
       <div class="product__pagination row">
@@ -89,23 +89,13 @@
                 <i class="fas fa-angle-left"></i>
               </a>
             </li>
-            <li class="product__pagination-item pagination-item-active">
-              <a href="#" class="product__pagination-link">1</a>
-            </li>
-            <li class="product__pagination-item">
-              <a href="#" class="product__pagination-link">2</a>
-            </li>
-            <li class="product__pagination-item">
-              <a href="#" class="product__pagination-link">3</a>
-            </li>
-            <li class="product__pagination-item">
-              <a href="#" class="product__pagination-link">4</a>
-            </li>
-            <li class="product__pagination-item">
-              <a href="#" class="product__pagination-link">
-                <i class="fas fa-angle-right"></i>
-              </a>
-            </li>
+
+            <?php for ($i = 1; $i <= $data['total_pages']; $i++): ?>
+              <li class="product__pagination-item pagination-item-active">
+                <a href="<?= base_url("pet/pet&page=$i") ?>" class="product__pagination-link"><?= $i ?></a>
+              </li>
+            <?php endfor; ?>
+
             <li class="product__pagination-item">
               <a href="#" class="product__pagination-link">
                 <i class="fas fa-angle-double-right"></i>

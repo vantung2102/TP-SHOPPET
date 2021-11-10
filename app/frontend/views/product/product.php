@@ -5,7 +5,7 @@
     <div class="slide-banner__text slide-banner__text2">
       <h2 class="slide-banner__title-1">Welcome to</h2>
       <h2 class="slide-banner__title-2">TP & SHOPPET</h2>
-      <p class="slide-banner__description banner-detail">Product</p>
+      <p class="slide-banner__description banner-detail">Products</p>
     </div>
   </div>
 </div>
@@ -39,14 +39,14 @@
     <div class="grid wide">
       <div class="row">
 
-      <?php foreach($data['pet'] as $data): ?>
+      <?php foreach($data['product'] as $data): ?>
 
         <div class="col l-3 m-6 c-12">
           <div class="category-products-item">
             <div
               class="category-products-item__img"
               style="
-                background-image: url(<?= load_images('pet', $data['img']) ?>);
+                background-image: url(<?= load_images('product', $data['img']) ?>);
               "
             ></div>
             <h4 class="category-products-item__name">

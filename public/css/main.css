@@ -913,6 +913,7 @@
 
 .product__popular {
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .product-item {
@@ -949,6 +950,14 @@
 .product-img {
   position: relative;
   overflow: hidden;
+}
+
+.product-img-container {
+  padding-top: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .product-img img {
@@ -994,6 +1003,7 @@
 
 .product-content {
   padding: 17px 10px 16px;
+  background-color: #f5f5f5;
 }
 
 .product-content > h4 {

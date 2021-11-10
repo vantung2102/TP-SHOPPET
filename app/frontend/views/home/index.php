@@ -44,141 +44,57 @@
       <div class="col l-10 m-10 c-12">
         <div class="product__popular">
           <div class="row sm-gutter">
-            <div class="product-item col l-3 m-4 c-12">
-              <div class="product-wrapper">
-                <div class="product-img">
-                  <a href="#">
-                    <img
-                      src="<?= load_images('pet', 'BichconFrise.jpg') ?>"
-                      alt="hinh"
-                    />
-                  </a>
-                  <div class="product-action">
+            <?php foreach($data['pet'] as $pet): ?>
+              <div class="product-item col l-3 m-4 c-12">
+                <div class="product-wrapper">
+                  <div class="product-img">
                     <a href="#">
-                      <i class="product-icon fas fa-plus"></i>
+                    <div
+                        class="product-img-container"
+                        style="
+                          background-image: url(<?= load_images('pet', $pet['img']) ?>);
+                        "
+                      ></div>
                     </a>
-                    <a title="Add To Cart" href="#">
-                      <i class="product-icon fas fa-shopping-cart"></i>
-                    </a>
+                    <div class="product-action">
+                      <a href="#">
+                        <i class="product-icon fas fa-plus"></i>
+                      </a>
+                      <a title="Add To Cart" href="#">
+                        <i class="product-icon fas fa-shopping-cart"></i>
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                <div class="product-content">
-                  <h4><a href="">Dog Calcium Food</a></h4>
-                  <div class="product-evaluate">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                  <div class="product-content">
+                    <h4>
+                      <a href=""><?= $pet['name'] ?></a>
+                    </h4>
+                    <div class="product-evaluate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="product-price">
+                      <span class="new"><?= $pet['old_price'] ?> </span>
+                      <span class="old"><?= $pet['new_price'] ?></span>
+                    </div>
                   </div>
-                  <div class="product-price">
-                    <span class="new">5.000.000 </span>
-                    <span class="old">2.000.000</span>
+
+                  <div class="product-favourite">
+                    <i class="fas fa-check"></i>
+                    <span>HOT NEW</span>
                   </div>
-                </div>
 
-                <div class="product-favourite">
-                  <i class="fas fa-check"></i>
-                  <span>HOT NEW</span>
-                </div>
-
-                <div class="product-sale-off">
-                  <span class="product-percent">10%</span>
-                  <span class="product-label">Giảm</span>
+                  <div class="product-sale-off">
+                    <span class="product-percent">10%</span>
+                    <span class="product-label">Giảm</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="product-item col l-3 m-4 c-12">
-              <div class="product-wrapper">
-                <div class="product-img">
-                  <a href="#">
-                    <img
-                      src="<?= load_images('pet', 'BichconFrise.jpg') ?>"
-                      alt="hinh"
-                    />
-                  </a>
-                  <div class="product-action">
-                    <a href="#">
-                      <i class="product-icon fas fa-plus"></i>
-                    </a>
-                    <a title="Add To Cart" href="#">
-                      <i class="product-icon fas fa-shopping-cart"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="product-content">
-                  <h4><a href="">Dog Calcium Food</a></h4>
-                  <div class="product-evaluate">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="product-price">
-                    <span class="new">5.000.000 </span>
-                    <span class="old">2.000.000</span>
-                  </div>
-                </div>
-
-                <div class="product-favourite">
-                  <i class="fas fa-check"></i>
-                  <span>HOT NEW</span>
-                </div>
-
-                <div class="product-sale-off">
-                  <span class="product-percent">10%</span>
-                  <span class="product-label">Giảm</span>
-                </div>
-              </div>
-            </div>
-            <div class="product-item col l-3 m-4 c-12">
-              <div class="product-wrapper">
-                <div class="product-img">
-                  <a href="#">
-                    <img
-                      src="<?= load_images('pet', 'BichconFrise.jpg') ?>"
-                      alt="hinh"
-                    />
-                  </a>
-                  <div class="product-action">
-                    <a href="#">
-                      <i class="product-icon fas fa-plus"></i>
-                    </a>
-                    <a title="Add To Cart" href="#">
-                      <i class="product-icon fas fa-shopping-cart"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="product-content">
-                  <h4><a href="">Dog Calcium Food</a></h4>
-                  <div class="product-evaluate">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="product-price">
-                    <span class="new">5.000.000 </span>
-                    <span class="old">2.000.000</span>
-                  </div>
-                </div>
-
-                <div class="product-favourite">
-                  <i class="fas fa-check"></i>
-                  <span>HOT NEW</span>
-                </div>
-
-                <div class="product-sale-off">
-                  <span class="product-percent">10%</span>
-                  <span class="product-label">Giảm</span>
-                </div>
-              </div>
-            </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
@@ -205,145 +121,64 @@
       <div class="col l-10 m-10">
         <div class="product__popular">
           <div class="row sm-gutter">
-            <div class="product-item col l-3 m-4 c-12">
-              <div class="product-wrapper">
-                <div class="product-img">
-                  <a href="#">
-                    <img
-                      src="<?= load_images('pet', 'BichconFrise.jpg') ?>"
-                      alt="hinh"
-                    />
-                  </a>
-                  <div class="product-action">
+          <?php foreach($data['product'] as $product): ?>
+              <div class="product-item col l-3 m-4 c-12">
+                <div class="product-wrapper">
+                  <div class="product-img">
                     <a href="#">
-                      <i class="product-icon fas fa-plus"></i>
+                    <div
+                        class="product-img-container"
+                        style="
+                          background-image: url(<?= load_images('product', $product['img']) ?>);
+                        "
+                      ></div>
                     </a>
-                    <a title="Add To Cart" href="#">
-                      <i class="product-icon fas fa-shopping-cart"></i>
-                    </a>
+                    <div class="product-action">
+                      <a href="#">
+                        <i class="product-icon fas fa-plus"></i>
+                      </a>
+                      <a title="Add To Cart" href="#">
+                        <i class="product-icon fas fa-shopping-cart"></i>
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                <div class="product-content">
-                  <h4><a href="">Dog Calcium Food</a></h4>
-                  <div class="product-evaluate">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                  <div class="product-content">
+                    <h4>
+                      <a href=""><?= $product['name'] ?></a>
+                    </h4>
+                    <div class="product-evaluate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="product-price">
+                      <span class="new"><?= $product['old_price'] ?> </span>
+                      <span class="old"><?= $product['new_price'] ?></span>
+                    </div>
                   </div>
-                  <div class="product-price">
-                    <span class="new">5.000.000 </span>
-                    <span class="old">2.000.000</span>
+
+                  <div class="product-favourite">
+                    <i class="fas fa-check"></i>
+                    <span>HOT NEW</span>
                   </div>
-                </div>
 
-                <div class="product-favourite">
-                  <i class="fas fa-check"></i>
-                  <span>HOT NEW</span>
-                </div>
-
-                <div class="product-sale-off">
-                  <span class="product-percent">10%</span>
-                  <span class="product-label">Giảm</span>
+                  <div class="product-sale-off">
+                    <span class="product-percent">10%</span>
+                    <span class="product-label">Giảm</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="product-item col l-3 m-4 c-12">
-              <div class="product-wrapper">
-                <div class="product-img">
-                  <a href="#">
-                    <img
-                      src="<?= load_images('pet', 'BichconFrise.jpg') ?>"
-                      alt="hinh"
-                    />
-                  </a>
-                  <div class="product-action">
-                    <a href="#">
-                      <i class="product-icon fas fa-plus"></i>
-                    </a>
-                    <a title="Add To Cart" href="#">
-                      <i class="product-icon fas fa-shopping-cart"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="product-content">
-                  <h4><a href="">Dog Calcium Food</a></h4>
-                  <div class="product-evaluate">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="product-price">
-                    <span class="new">5.000.000 </span>
-                    <span class="old">2.000.000</span>
-                  </div>
-                </div>
-
-                <div class="product-favourite">
-                  <i class="fas fa-check"></i>
-                  <span>HOT NEW</span>
-                </div>
-
-                <div class="product-sale-off">
-                  <span class="product-percent">10%</span>
-                  <span class="product-label">Giảm</span>
-                </div>
-              </div>
-            </div>
-            <div class="product-item col l-3 m-4 c-12">
-              <div class="product-wrapper">
-                <div class="product-img">
-                  <a href="#">
-                    <img
-                      src="<?= load_images('pet', 'BichconFrise.jpg') ?>"
-                      alt="hinh"
-                    />
-                  </a>
-                  <div class="product-action">
-                    <a href="#">
-                      <i class="product-icon fas fa-plus"></i>
-                    </a>
-                    <a title="Add To Cart" href="#">
-                      <i class="product-icon fas fa-shopping-cart"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="product-content">
-                  <h4><a href="">Dog Calcium Food</a></h4>
-                  <div class="product-evaluate">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="product-price">
-                    <span class="new">5.000.000 </span>
-                    <span class="old">2.000.000</span>
-                  </div>
-                </div>
-
-                <div class="product-favourite">
-                  <i class="fas fa-check"></i>
-                  <span>HOT NEW</span>
-                </div>
-
-                <div class="product-sale-off">
-                  <span class="product-percent">10%</span>
-                  <span class="product-label">Giảm</span>
-                </div>
-              </div>
-            </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
-      <a href="<?= base_url('product/product') ?>" class="product__select-noPet hidden-mobile">
+      <a
+        href="<?= base_url('product/product') ?>"
+        class="product__select-noPet hidden-mobile"
+      >
         <h4>See more</h4>
         <i class="product__select-icon fas fa-angle-double-right"></i>
       </a>
