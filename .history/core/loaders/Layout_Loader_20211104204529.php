@@ -14,9 +14,7 @@
             if($this->layout === null){
                 exit;
             }
-            if (isset($_SESSION['is_admin'])) {
-                $this->layout = 'admin';
-            }
+
             $layout_path = APP_PATH . "/views/layout/{$this->layout}.php";
 
             if(!file_exists($layout_path)){

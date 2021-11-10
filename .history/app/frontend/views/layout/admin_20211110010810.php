@@ -59,7 +59,7 @@
           <ul class="accordion-menu">
             <li class="sidebar-title">BẢNG ĐIỀU KHIỂN</li>
             <li class="active-page">
-              <a href="<?= base_url('admin/index') ?>" class="active">
+              <a href="<?= base_url('admin') ?>" class="active">
                 <i class="material-icons-outlined">pets</i>THÚ CƯNG
               </a>
             </li>
@@ -250,6 +250,14 @@
             </div>
           </nav>
         </div>
+
+        <?php
+
+          // if(!isset($_SESSION['id']) || !isset($_SESSION['email']))
+          // {
+          //   redirect('admin/admin');
+          // }
+        ?>
 
         <?= $NoiDung; ?>
       </div>

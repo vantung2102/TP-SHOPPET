@@ -78,11 +78,23 @@
         } 
 
         function order() {
-            $this->view->load_view('admin/order');
+            if(isset($_COOKIE['id']) && isset($_COOKIE['email']))
+            {
+                $this->view->load_view('admin/order');
+            } 
+            else {
+                redirect('admin/login');
+            }
         } 
 
         function orderDetail() {
-            $this->view->load_view('admin/orderDetail');
+            if(isset($_COOKIE['id']) && isset($_COOKIE['email']))
+            {
+                $this->view->load_view('admin/orderDetail');
+            } 
+            else {
+                redirect('admin/adminLogin');
+            }
         } 
 
         function category() {

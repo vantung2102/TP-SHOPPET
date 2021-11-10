@@ -183,7 +183,7 @@
         </div>
       </div>
       <a
-        href="<?= base_url('pet/pet') ?>"
+        href="<?= base_url('product/product') ?>"
         class="product__select-pet hidden-mobile"
       >
         <h4>See more</h4>

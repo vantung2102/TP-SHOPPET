@@ -251,6 +251,14 @@
           </nav>
         </div>
 
+        <?php
+
+          // if(!isset($_SESSION['id']) || !isset($_SESSION['email']))
+          // {
+          //   redirect('admin/admin');
+          // }
+        ?>
+
         <?= $NoiDung; ?>
       </div>
     </div>

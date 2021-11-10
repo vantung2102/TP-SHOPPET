@@ -7,10 +7,6 @@
             parent::__construct();
             $this->layout->setLayout('admin');
             $this->model->load_model('admin','admin');
-            if (!isset($_SESSION['is_admin'])) {
-                $this-> login();
-                return;
-            }
         }
 
         function login(){
@@ -39,13 +35,12 @@
                 else{
                     $_SESSION['id'] = $check['id'];
                     $_SESSION['is_admin'] = 'admin';
-
                     // if remember_me ? 
                     // $_COOKIE['id'] = $check['id'];
                     // $_COOKIE['email'] = $check['email'];
                     
                     // setcookie($_COOKIE['id'], $_COOKIE['email'], time() + 2*60*60, '/');
-                    redirect('admin/index'); 
+                    redirect('admin/admin'); 
                 }
             }
         }
@@ -56,11 +51,15 @@
         }  
 
         function index(){
-
-            $data = [
-                'pets' => $this->model->admin->loadDataPet(),
-            ];
-            $this->view->load_view('admin/admin', $data);
+            if (isset($_SESSION['is_admin'])) {
+                $data = [
+                    'pets' => $this->model->admin->loadDataPet(),
+                ];
+                $this->view->load_view('admin/admin', $data);
+            } else {
+                $this->login();
+            }
+           
         }  
 
         function user() {
@@ -78,11 +77,23 @@
         } 
 
         function order() {
-            $this->view->load_view('admin/order');
+            if(isset($_COOKIE['id']) && isset($_COOKIE['email']))
+            {
+                $this->view->load_view('admin/order');
+            } 
+            else {
+                redirect('admin/login');
+            }
         } 
 
         function orderDetail() {
-            $this->view->load_view('admin/orderDetail');
+            if(isset($_COOKIE['id']) && isset($_COOKIE['email']))
+            {
+                $this->view->load_view('admin/orderDetail');
+            } 
+            else {
+                redirect('admin/adminLogin');
+            }
         } 
 
         function category() {
