@@ -43,147 +43,180 @@
       <div class="col l-9">
         <div class="user_contain">
           <!--Thong tin ca nhan-->
-          <div class="boxDetailInfo active user_my-information">
-            <div class="user_my-information-title">
-              <h3 class="user_my-information-title-item">Thông tin cá nhân</h3>
-              <h3 class="user_my-information-title-item">Liên hệ</h3>
-            </div>
-            <div class="row">
-              <div class="col l-7 user_info-detail">
-                <form action="" id="form_personal-infor">
-                  <div class="information_input">
-                    <label for="username" class="information_input-title"
-                      >Tên đăng nhập
-                    </label>
-                    <input
-                      type="text"
-                      name="username"
-                      id="username"
-                      placeholder="Tên đăng nhập"
-                      class="input-value"
-                    />
-                    <label for="Fullname" class="information_input-title"
-                      >Họ tên</label
-                    >
-                    <input
-                      type="text"
-                      name="Fullname"
-                      id="Fullname"
-                      placeholder="Họ tên của bạn"
-                      class="input-value"
-                    />
-                    <label for="birthday" class="information_input-title"
-                      >Ngày sinh</label
-                    >
-                    <input
-                      type="date"
-                      name="birthday"
-                      id="birthday"
-                      class="input-value"
-                    />
-                    <label for="sex" class="information_input-title"
-                      >Giới tính</label
-                    >
-                    <div id="information_input-sex">
-                      <input type="radio" name="gender" id="male" />
-                      <label for="male">Nam</label>
-                      <input
-                        type="radio"
-                        name="gender"
-                        id="female"
-                        class="information_input-sex--item"
-                      />
-                      <label for="female">Nữ</label>
-                      <input
-                        type="radio"
-                        name="gender"
-                        id="another"
-                        class="information_input-sex--item"
-                      />
-                      <label for="another">Khác</label>
-                    </div>
-                  </div>
-                </form>
-                <div class="btn_save-change">
-                  <button type="button">Lưu thay đổi</button>
-                </div>
+          <?php foreach($data['user'] as $data):?>
+            <div class="boxDetailInfo active user_my-information">
+              <div class="user_my-information-title">
+                <h3 class="user_my-information-title-item">Thông tin cá nhân</h3>
+                <h3 class="user_my-information-title-item">Liên hệ</h3>
               </div>
-
-              <div class="col l-5">
-                <div class="user_info-contact">
-                  <div class="user_info-contact--item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div class="user_info-contact--text">
-                      <p>Số điện thoại</p>
-                      <p>0945732406</p>
-                    </div>
-                  </div>
-                  <div class="user_info-contact--change">
-                    <button class="change_info">Change</button>
-                  </div>
-                </div>
-
-                <div class="user_info-contact">
-                  <div class="user_info-contact--item">
-                    <i class="fas fa-envelope"></i>
-                    <div class="user_info-contact--text">
-                      <p>Email</p>
-                      <p>tothanhtam@gmail.com</p>
-                    </div>
-                  </div>
-                  <div class="user_info-contact--change">
-                    <button class="change_info">Change</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!---Địa chỉ-->
-          <div class="boxDetailInfo user_my-address">
-            <div class="address-title">
-              <div class="address_title-text">Địa chỉ của tôi</div>
-              <button class="address_title-btn--add">+ Thêm địa chỉ mới</button>
-            </div>
-            <div class="address-detail">
-              <div class="row user-address">
-                <div class="l-9">
-                  <div class="address-detail-infor">
-                    <div class="address-detail-name">Tô Thị Thanh Tâm</div>
-                    <div class="address-detail-phone">Phone : 0986712344</div>
-                    <div class="address-detail-location">
-                      Địa chỉ : Xã Thạch Hà, Huyện Hương Khê, Tỉnh Hà Tĩnh
-                    </div>
-                  </div>
-                </div>
-                <div class="l-3">
-                  <div class="address-detail-edit">
-                    <button class="address-detail-btn--update">Sửa</button>
-                    <button class="address-detail-btn--update">Xoá</button>
-                  </div>
-                </div>
-              </div>
-
               <div class="row">
-                <div class="l-9">
-                  <div class="address-detail-infor">
-                    <div class="address-detail-name">Tô Thị Thanh Tâm</div>
-                    <div class="address-detail-phone">Phone : 0986712344</div>
-                    <div class="address-detail-location">
-                      Địa chỉ : Xã Thạch Hà, Huyện Hương Khê, Tỉnh Hà Tĩnh
+              
+                <div class="col l-7 user_info-detail">
+                  <form action="<?= base_url('user/changeInfo') ?>" id="form_personal-infor" method="post">
+                    <div class="information_input">
+                      <label for="Fullname" class="information_input-title"
+                        >Họ tên</label
+                      >
+                      <input
+                        type="text"
+                        name="name"
+                        value="<?= $data['name']?>"
+                        id="Fullname"
+                        placeholder="Họ tên của bạn"
+                        class="input-value"
+                      />
+                      <label for="birthday" class="information_input-title"
+                        >Ngày sinh</label
+                      >
+                      <input
+                        type="date"
+                        name="birthday"
+                        value="<?= $data['birthday']?>"
+                        id="birthday"
+                        class="input-value"
+                      />
+                      <label for="birthday" class="information_input-title"
+                        >Ngày sinh</label
+                      >
+                      <input
+                        type="date"
+                        name="birthday"
+                        value="<?= $data['birthday']?>"
+                        id="birthday"
+                        class="input-value"
+                      />
+                      <label for="sex" class="information_input-title"
+                        >Giới tính</label
+                      >
+                      <div id="information_input-sex">
+                        <input type="radio" name="gender" value="nam" />
+                        <label for="male">Nam</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          id="female"
+                          value="nữ"
+                          class="information_input-sex--item"
+                        />
+                        <label for="female">Nữ</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="khác"
+                          id="another"
+                          class="information_input-sex--item"
+                        />
+                        <label for="another">Khác</label>
+                      </div>
                     </div>
-                  </div>
+                    <div class="btn_save-change">
+                      <button type="submit">Lưu thay đổi</button>
+                    </div>
+                  </form>
                 </div>
-                <div class="l-3">
-                  <div class="address-detail-edit">
-                    <button class="address-detail-btn--update">Sửa</button>
-                    <button class="address-detail-btn--update">Xoá</button>
+
+                <div class="col l-5">
+                  <form action="<?= base_url('user/changePhone') ?>" method="post">
+                    <div class="user_info-contact">
+                      <div class="user_info-contact--item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="user_info-contact--text">
+                          <p>Số điện thoại</p>
+                          <input name="phone" value="<?= $data['phone'] ?>">
+                        </div>
+                      </div>
+                      <div class="user_info-contact--change">
+                        <button type="submit" class="change_info">Thay đổi</button>
+                      </div>
+                    </div>
+                  </form>
+
+                  <form action="<?= base_url('user/changeEmail') ?>" method="post">
+                    <div class="user_info-contact">
+                      <div class="user_info-contact--item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="user_info-contact--text">
+                          <p>Email</p>
+                          <input name="email" value="<?= $data['email'] ?>">
+                        </div>
+                      </div>
+                      <div class="user_info-contact--change">
+                        <button type="submit" class="change_info">Thay đổi</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!---Địa chỉ-->
+            <div class="boxDetailInfo user_my-address">
+              <div class="address-detail">
+                <div class="row user-address">
+                  <div class="l-12">
+                    <div class="address-detail-infor">
+                    <form action="<?= base_url('user/changeInfo') ?>" id="form_personal-infor" method="post">
+                    <div class="information_input">
+                      <label for="Fullname" class="information_input-title"
+                        >Họ tên</label
+                      >
+                      <input
+                        type="text"
+                        name="name"
+                        value="<?= $data['name']?>"
+                        id="Fullname"
+                        placeholder="Họ tên của bạn"
+                        class="input-value"
+                      />
+                      <label for="birthday" class="information_input-title"
+                        >Ngày sinh</label
+                      >
+                      <input
+                        type="date"
+                        name="birthday"
+                        value="<?= $data['birthday']?>"
+                        id="birthday"
+                        class="input-value"
+                      />
+                      <label for="sex" class="information_input-title"
+                        >Giới tính</label
+                      >
+                      <div id="information_input-sex">
+                        <input type="radio" name="gender" value="nam" />
+                        <label for="male">Nam</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          id="female"
+                          value="nữ"
+                          class="information_input-sex--item"
+                        />
+                        <label for="female">Nữ</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="khác"
+                          id="another"
+                          class="information_input-sex--item"
+                        />
+                        <label for="another">Khác</label>
+                      </div>
+                    </div>
+                    <div class="btn_save-change">
+                      <button type="submit">Lưu thay đổi</button>
+                    </div>
+                  </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
+          <?php endforeach; ?>
           <!--Đổi mật khẩu-->
           <div class="boxDetailInfo user-password">
             <div class="user-password-title">Thay đổi mật khẩu</div>

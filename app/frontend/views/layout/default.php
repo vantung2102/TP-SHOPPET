@@ -30,7 +30,6 @@
     <link rel="stylesheet" href="<?= load_css('base') ?>" />
     <link rel="stylesheet" href="<?= load_css('main') ?>" />
     <link rel="stylesheet" href="<?= load_css('user') ?>" />
-
     <link rel="stylesheet" href="<?= load_css('detail_product') ?>" />
     <link rel="stylesheet" href="<?= load_css('product-cart') ?>" />
     <link rel="stylesheet" href="<?= load_css('products') ?>" />
@@ -383,7 +382,7 @@
                           </a>
                           <ul class="header__navbar-user-menu">
                             <li class="header__navbar-user-item">
-                              <a href="<?= base_url('login/logout') ?>">Tài khoản của tôi</a>
+                              <a href="<?= base_url('user/user') ?>">Tài khoản của tôi</a>
                             </li>
                             <li class="header__navbar-user-item">
                               <a href="<?= base_url('login/logout') ?>">Đăng xuất</a>
