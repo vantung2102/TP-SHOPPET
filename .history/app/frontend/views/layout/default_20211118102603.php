@@ -572,22 +572,22 @@
                   <ul class="footer-widget-top-content-list">
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link"
-                        >Trợ giúp & Liên hệ với chúng tôi
+                        >Help & Contact Us
                       </a>
                     </li>
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link">
-                      Trả hàng & hoàn lại tiền
+                        Returns & Refunds
                       </a>
                     </li>
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link">
-                      Cửa hàng trực tuyến
+                        Online Stores
                       </a>
                     </li>
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link">
-                      Điều khoản và điều kiện
+                        Terms & Conditions
                       </a>
                     </li>
                   </ul>
@@ -595,26 +595,26 @@
               </div>
               <div class="col l-3 m-6 c-12">
                 <div class="footer-top-help">
-                  <h2 class="footer-widget-top-title">NGƯỜI DÙNG</h2>
+                  <h2 class="footer-widget-top-title">GIÚP ĐỠ NGƯỜI DÙNG</h2>
                   <ul class="footer-widget-top-content-list">
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link"
-                        >Câu hỏi thường gặp
+                        >Faq's
                       </a>
                     </li>
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link">
-                      Các gói định giá
+                        Pricing Plans
                       </a>
                     </li>
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link">
-                      Theo dõi đơn hàng
+                        Order Traking
                       </a>
                     </li>
                     <li class="footer-widget-top-content-item">
                       <a href="#" class="footer-widget-top-content-link">
-                      Lợi nhuận
+                        Returns
                       </a>
                     </li>
                   </ul>
@@ -624,8 +624,8 @@
                 <div class="footer-top-sub">
                   <h2 class="footer-widget-top-title">ĐĂNG KÍ </h2>
                   <p>
-                    Đăng ký để nhận thêm nhiều khuyến mãi và hổ trợ
-                    từ cửa hàng
+                    Etiam rhoncus. Maecenas temp us, tellus eget condimentum
+                    rho.
                   </p>
                   <div class="footer__input-boxs">
                     <form action="#" method="post">
@@ -634,7 +634,7 @@
                         <input
                           type="text"
                           class="footer__input"
-                          placeholder="Họ và tên"
+                          placeholder="Name"
                         />
                       </div>
                       <div class="footer__input-box">
@@ -646,7 +646,7 @@
                         />
                       </div>
                       <button type="submit" class="button footer__button">
-                        Đăng ký
+                        SUBSCRIBE
                       </button>
                     </form>
                   </div>
@@ -656,8 +656,8 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>Bản quyền © <a href="#">TP&SHOPPET.</a> Tất cả các quyền.</p>
-          <p>Được thiết kế bởi nhóm 10</p>
+          <p>Copyright © <a href="#">TP&SHOPPET.</a> All Right Reserved.</p>
+          <p>Designed by nhóm 10</p>
         </div>
       </footer>
 

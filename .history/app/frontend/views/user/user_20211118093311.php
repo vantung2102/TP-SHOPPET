@@ -15,10 +15,10 @@
                 <i class="manage-icon fas fa-user"></i>
                 <div class="manage_acount-text">Thông tin cá nhân</div>
               </li>
-              <!-- <li class="manage_acount-item arrtitle">
+              <li class="manage_acount-item arrtitle">
                 <i class="manage-icon fas fa-map-marker-alt"></i>
                 <div class="manage_acount-text">Địa chỉ</div>
-              </li> -->
+              </li>
               <li class="manage_acount-item arrtitle">
                 <i class="manage-icon fas fa-key"></i>
                 <div class="manage_acount-text">Đổi mật khẩu</div>
@@ -79,10 +79,10 @@
                         >Địa chỉ</label
                       >
                       <input
-                        type="text"
-                        name="address"
-                        value="<?= $data['address']?>"
-                        id="address"
+                        type="date"
+                        name="birthday"
+                        value="<?= $data['birthday']?>"
+                        id="birthday"
                         class="input-value"
                       />
                       <label for="sex" class="information_input-title"
@@ -152,7 +152,7 @@
             </div>
 
             <!---Địa chỉ-->
-            <!-- <div class="boxDetailInfo user_my-address">
+            <div class="boxDetailInfo user_my-address">
               <div class="address-detail">
                 <div class="row user-address">
                   <div class="l-12">
@@ -214,7 +214,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
           <?php endforeach; ?>
           <!--Đổi mật khẩu-->

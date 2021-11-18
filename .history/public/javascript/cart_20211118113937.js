@@ -13,10 +13,12 @@ $(document).ready(function () {
     var price_old = $(".price-old").data("old_price");
     var price_new = $(".price-new").data("new_price");
 
-    if (ids.includes(id) == true) {
-      alert("San pham nay da ton tai trong gio hang.");
-      return false;
-    }
+    console.log(id);
+
+    // if (carts["id"].includes(id) == true) {
+    //   alert("San pham nay da ton tai trong gio hang.");
+    //   return false;
+    // }
 
     var product_detail = {
       id: id,

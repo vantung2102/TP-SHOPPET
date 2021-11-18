@@ -180,7 +180,7 @@
                     <div class="product-detail__infor-title-review-sparate">
                       |
                     </div>
-                    <a>100 Đã bán</a>
+                    <a>100 Sold</a>
                   </div>
                 </div>
                 <div class="product-detail__infor-select">
@@ -245,8 +245,8 @@
                       <i class="fas fa-cart-plus"></i>
                       Thêm vào giỏ hàng
                     </button>
-                    <button class="buy-btn cart">
-                      <a class="btn-buy" href="<?= base_url('cart/cart')?>">Mua ngay</a>
+                    <button class="buy-btn">
+                      <a class="btn-buy" href="#">Mua ngay</a>
                     </button>
                   </div>
                 </div>

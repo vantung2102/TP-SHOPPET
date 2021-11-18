@@ -1002,8 +1002,8 @@
 
 .product__title > h4 {
   color: var(--primary-color);
-  font-family: "monospace", cursive;
-  font-size: 2.8rem;
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
   margin: 0 0 20px;
 }
 
@@ -1085,7 +1085,6 @@
   text-decoration: none;
   font-weight: 600;
   color: var(--primary-color);
-  overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;

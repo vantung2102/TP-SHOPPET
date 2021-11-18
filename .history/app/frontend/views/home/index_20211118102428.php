@@ -106,7 +106,7 @@
         href="<?= base_url('pet/pet') ?>"
         class="product__select-pet hidden-mobile"
       >
-        <h4>xem thêm</h4>
+        <h4>See more</h4>
         <i class="product__select-icon fas fa-angle-double-right"></i>
       </a>
     </div>
@@ -183,7 +183,7 @@
         href="<?= base_url('product/product') ?>"
         class="product__select-noPet hidden-mobile"
       >
-        <h4>xem thêm</h4>
+        <h4>See more</h4>
         <i class="product__select-icon fas fa-angle-double-right"></i>
       </a>
     </div>
@@ -196,7 +196,7 @@
     <div class="review__container">
       <div class="review__img"></div>
       <div class="review__text center">
-        <h2 style="text-transform: uppercase;">đánh giá hàng đầu</h2>
+        <h2 style="text-transform: uppercase;;">đánh giá hàng đầu</h2>
         <p>
           Nuôi thú cưng là một trong những sở thích được yêu thích nhất hiện
           nay, đặc biệt là những quốc gia châu âu. Tuy nhiên không phổ biến ở

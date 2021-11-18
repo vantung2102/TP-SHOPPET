@@ -624,7 +624,7 @@
                 <div class="footer-top-sub">
                   <h2 class="footer-widget-top-title">ĐĂNG KÍ </h2>
                   <p>
-                    Đăng ký để nhận thêm nhiều khuyến mãi và hổ trợ
+                    Đăng kí để nhận thêm nhiều khuyến mãi và hổ trợ
                     từ cửa hàng
                   </p>
                   <div class="footer__input-boxs">
@@ -634,7 +634,7 @@
                         <input
                           type="text"
                           class="footer__input"
-                          placeholder="Họ và tên"
+                          placeholder="Name"
                         />
                       </div>
                       <div class="footer__input-box">
@@ -646,7 +646,7 @@
                         />
                       </div>
                       <button type="submit" class="button footer__button">
-                        Đăng ký
+                        SUBSCRIBE
                       </button>
                     </form>
                   </div>
@@ -656,8 +656,8 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>Bản quyền © <a href="#">TP&SHOPPET.</a> Tất cả các quyền.</p>
-          <p>Được thiết kế bởi nhóm 10</p>
+          <p>Copyright © <a href="#">TP&SHOPPET.</a> All Right Reserved.</p>
+          <p>Designed by nhóm 10</p>
         </div>
       </footer>
 

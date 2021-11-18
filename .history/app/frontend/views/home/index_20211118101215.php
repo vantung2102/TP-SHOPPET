@@ -5,9 +5,9 @@
       <div class="slide-banner">
         <div class="slide-banner__img"></div>
         <div class="slide-banner__text">
-          <h2 class="slide-banner__title-1">Chào Mừng Đến Với</h2>
+          <h2 class="slide-banner__title-1">Welcome to</h2>
           <h2 class="slide-banner__title-2">TP & SHOPPET</h2>
-          <p class="slide-banner__description">Chúng tôi nuôi thú cưng vì niềm vui.</p>
+          <p class="slide-banner__description">We keep pets for pleasure.</p>
         </div>
       </div>
       <div class="next-warp__btn hidden-mobile">
@@ -26,8 +26,8 @@
 <div class="products">
   <div class="product grid wide">
     <div class="product__title">
-      <h4>PHỔ BIẾN NHẤT</h4>
-      <h2>SẢN PHẨM MỚI</h2>
+      <h4>Most popular</h4>
+      <h2>Recent Products</h2>
     </div>
 
     <div class="row product__menu-pet">
@@ -106,7 +106,7 @@
         href="<?= base_url('pet/pet') ?>"
         class="product__select-pet hidden-mobile"
       >
-        <h4>xem thêm</h4>
+        <h4>See more</h4>
         <i class="product__select-icon fas fa-angle-double-right"></i>
       </a>
     </div>
@@ -183,7 +183,7 @@
         href="<?= base_url('product/product') ?>"
         class="product__select-noPet hidden-mobile"
       >
-        <h4>xem thêm</h4>
+        <h4>See more</h4>
         <i class="product__select-icon fas fa-angle-double-right"></i>
       </a>
     </div>
@@ -196,7 +196,7 @@
     <div class="review__container">
       <div class="review__img"></div>
       <div class="review__text center">
-        <h2 style="text-transform: uppercase;">đánh giá hàng đầu</h2>
+        <h2>TOP REVIEW</h2>
         <p>
           Nuôi thú cưng là một trong những sở thích được yêu thích nhất hiện
           nay, đặc biệt là những quốc gia châu âu. Tuy nhiên không phổ biến ở
@@ -259,14 +259,15 @@
           <div class="user-info">
             <div class="user-info__avatar">
               <img
-                src="<?= load_images('icon', 'user3.jpg') ?>"
+                src="<?= load_images('pet', 'Chó Phốc sóc.jpg') ?>"
                 alt="hinh"
               />
             </div>
             <div class="user-info__content">
-              <h4 class="user-info__content-name">Lê Văn Tùng</h4>
+              <h4 class="user-info__content-name">Tô thị thanh tâm</h4>
               <p class="user-info__content-comment">
-              Shop giao hàng nhanh, mới đặt hôm 11/11, 13/11 đã nhận được. Mấy thứ này cún nhà mình rất thích, sẽ quay lại mua lần nữa
+                tôi rất yêu thích loài chó, tôi rất yêu thích loài chó tôi rất
+                yêu thích loài chó
               </p>
               <div class="product-rate">
                 <i class="fas fa-star"></i>
@@ -275,7 +276,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <h5 class="user-info__content-city">Bà Rịa Vũng Tàu</h5>
+              <h5 class="user-info__content-city">Hà tỉnh</h5>
             </div>
           </div>
         </div>

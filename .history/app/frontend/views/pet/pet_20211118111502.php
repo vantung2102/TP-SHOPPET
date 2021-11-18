@@ -92,7 +92,7 @@
             </li>
             <!-- pagination-item-active -->
               
-              <!-- <?php if(isset($_GET['processSortAsc'])): ?>
+              <?php if(isset($_GET['processSortAsc'])): ?>
                 <li class="product__pagination-item pagination-item-active">
                   <a href="<?= base_url("pet/pet&processSortAsc&page=1") ?>" class="product__pagination-link">1</a>
                 </li>
@@ -110,7 +110,7 @@
                     <a href="<?= base_url("pet/pet&processSortDesc&page=$i") ?>" class="product__pagination-link"><?= $i ?></a>
                   </li>
                 <?php endfor; ?>
-              <?php else: ?> -->
+              <?php else: ?>
                 <li class="product__pagination-item pagination-item-active">
                   <a href="<?= base_url("pet/pet&page=1") ?>" class="product__pagination-link">1</a>
                 </li>
@@ -119,7 +119,7 @@
                     <a href="<?= base_url("pet/pet&page=$i") ?>" class="product__pagination-link"><?= $i ?></a>
                   </li>
                 <?php endfor; ?>
-              <!-- <?php endif;?> -->
+              <?php endif;?>
             <li class="product__pagination-item">
               <a href="#" class="product__pagination-link">
                 <i class="fas fa-angle-double-right"></i>

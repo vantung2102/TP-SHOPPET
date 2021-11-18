@@ -106,7 +106,7 @@
         href="<?= base_url('pet/pet') ?>"
         class="product__select-pet hidden-mobile"
       >
-        <h4>xem thêm</h4>
+        <h4>See more</h4>
         <i class="product__select-icon fas fa-angle-double-right"></i>
       </a>
     </div>
@@ -183,7 +183,7 @@
         href="<?= base_url('product/product') ?>"
         class="product__select-noPet hidden-mobile"
       >
-        <h4>xem thêm</h4>
+        <h4>See more</h4>
         <i class="product__select-icon fas fa-angle-double-right"></i>
       </a>
     </div>

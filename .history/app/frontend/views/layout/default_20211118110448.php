@@ -624,7 +624,7 @@
                 <div class="footer-top-sub">
                   <h2 class="footer-widget-top-title">ĐĂNG KÍ </h2>
                   <p>
-                    Đăng ký để nhận thêm nhiều khuyến mãi và hổ trợ
+                    Đăng kí để nhận thêm nhiều khuyến mãi và hổ trợ
                     từ cửa hàng
                   </p>
                   <div class="footer__input-boxs">
@@ -646,7 +646,7 @@
                         />
                       </div>
                       <button type="submit" class="button footer__button">
-                        Đăng ký
+                        Đăng kí
                       </button>
                     </form>
                   </div>

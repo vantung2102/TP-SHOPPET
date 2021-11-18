@@ -245,8 +245,8 @@
                       <i class="fas fa-cart-plus"></i>
                       Thêm vào giỏ hàng
                     </button>
-                    <button class="buy-btn cart">
-                      <a class="btn-buy" href="<?= base_url('cart/cart')?>">Mua ngay</a>
+                    <button class="buy-btn">
+                      <a class="btn-buy" href="#">Mua ngay</a>
                     </button>
                   </div>
                 </div>

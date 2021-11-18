@@ -3,7 +3,6 @@ import { Constants } from "../javascript/constants.js";
 $(document).ready(function () {
   let obj = new Constants();
   var carts = JSON.parse(localStorage.getItem("carts")) || [];
-  var ids = JSON.parse(localStorage.getItem("ids")) || [];
 
   $(".cart").click(function () {
     var id = $(this).data("id");
@@ -13,10 +12,12 @@ $(document).ready(function () {
     var price_old = $(".price-old").data("old_price");
     var price_new = $(".price-new").data("new_price");
 
-    if (ids.includes(id) == true) {
-      alert("San pham nay da ton tai trong gio hang.");
-      return false;
-    }
+    console.log(carts);
+
+    // if (carts["id"].includes(id) == true) {
+    //   alert("San pham nay da ton tai trong gio hang.");
+    //   return false;
+    // }
 
     var product_detail = {
       id: id,
@@ -26,7 +27,6 @@ $(document).ready(function () {
       price_old: price_old,
       price_new: price_new,
     };
-    ids.push(id);
     carts.push(product_detail);
     localStorage.setItem("carts", JSON.stringify(carts));
     $(".cart_quantity").html(
