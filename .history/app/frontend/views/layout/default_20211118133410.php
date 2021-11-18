@@ -521,7 +521,7 @@
                 <div class="footer-top-widget">
                   <div class="footer-top-widget__logo">
                     <a href="">
-                      <img src="<?= load_images('icon', 'logo-v2.png') ?>" alt="" />
+                      <img src="<?= load_images('icon', 'logo.png') ?>" alt="" />
                     </a>
                   </div>
                   <p class="footer-top-widget__info">

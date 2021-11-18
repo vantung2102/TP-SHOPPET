@@ -124,7 +124,6 @@ $(document).ready(function () {
   });
 
   function getProducts(carts) {
-    // debugger;
     console.log(carts);
     var data = {
       carts: carts,
@@ -135,7 +134,7 @@ $(document).ready(function () {
       data: data,
       url: obj.baseUrl("cart/get_product_ajax"),
       success: function (response) {
-        // var data = JSON.parse(response);
+        var data = JSON.parse(response);
         console.log(response);
       },
       error: function (error) {

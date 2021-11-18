@@ -30,14 +30,9 @@
 .header__nav-logo {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   text-align: center;
   height: 100%;
-}
-
-.header__nav-logo a img {
-  width: 120%;
-  height: 35px;
 }
 
 /* header main */
@@ -1536,7 +1531,6 @@
 
 .footer-top-widget__logo a img {
   width: 100%;
-  margin-top: 10px;
 }
 
 .footer-top-widget__social-list {

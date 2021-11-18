@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP&SHOPPET</title>
-    <link rel="icon" href="<?= load_images('icon','icon.png')?>">
+    <title>TP & ShopPet</title>
+    <link rel="icon" href="<?= load_images('icon','logoweb.png')?>">
 
     <!-- all css -->
     <link
@@ -129,7 +129,7 @@
                 <div class="col l-2 m-6 c-7">
                     <div class="header__nav-logo">
                     <a href="<?= base_url('home/index') ?>">
-                        <img  src="<?= load_images('icon','logo-v2.png')?>" alt="" />
+                        <img src="<?= load_images('icon','logo.png')?>" alt="" />
                     </a>
                     </div>
                 </div>
@@ -521,7 +521,7 @@
                 <div class="footer-top-widget">
                   <div class="footer-top-widget__logo">
                     <a href="">
-                      <img src="<?= load_images('icon', 'logo-v2.png') ?>" alt="" />
+                      <img src="<?= load_images('icon', 'logo.png') ?>" alt="" />
                     </a>
                   </div>
                   <p class="footer-top-widget__info">

@@ -124,19 +124,17 @@ $(document).ready(function () {
   });
 
   function getProducts(carts) {
-    // debugger;
     console.log(carts);
     var data = {
       carts: carts,
     };
     $.ajax({
       type: "POST",
-      dataType: "json",
       data: data,
       url: obj.baseUrl("cart/get_product_ajax"),
       success: function (response) {
-        // var data = JSON.parse(response);
-        console.log(response);
+        var data = JSON.parse(response);
+        console.log(data);
       },
       error: function (error) {
         console.log(error);

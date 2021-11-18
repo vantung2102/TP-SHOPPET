@@ -35,11 +35,6 @@
   height: 100%;
 }
 
-.header__nav-logo a img {
-  width: 120%;
-  height: 35px;
-}
-
 /* header main */
 
 .header__nav-menu {
@@ -1536,7 +1531,6 @@
 
 .footer-top-widget__logo a img {
   width: 100%;
-  margin-top: 10px;
 }
 
 .footer-top-widget__social-list {

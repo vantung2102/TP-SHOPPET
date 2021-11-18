@@ -124,7 +124,6 @@ $(document).ready(function () {
   });
 
   function getProducts(carts) {
-    // debugger;
     console.log(carts);
     var data = {
       carts: carts,

@@ -21,8 +21,8 @@
             $message = '';
             $status = 1;
 
-            $carts = getParameter('carts');
-            var_dump($carts);exit;
+            $carts = getPostParameter('carts');
+            var_dump($_POST);exit;
             $data = [ 
                 'carts' => $carts,
             ];

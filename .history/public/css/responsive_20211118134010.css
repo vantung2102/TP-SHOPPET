@@ -273,8 +273,12 @@
     width: 60%;
   }
 
+  .footer-widget-top-title{
+    font-size
+  }
+
   .footer-top-widget {
-    margin-bottom: 0;
+    margin-bottom: 2.2;
   }
 
   .footer-top-useful {
@@ -505,10 +509,6 @@
   /* review */
   .review__container {
     height: 510px;
-  }
-
-  .footer-widget-top-title {
-    font-size: 2.2rem;
   }
 
   .review__text h2 {
