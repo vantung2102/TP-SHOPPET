@@ -51,7 +51,7 @@
                         ?>
                           <tbody>
                             <tr>
-                              <td><?= $index ?></td>
+                              <td>1</td>
                               <td><?= $order['order_id'] ?></td>
                               <td><?= $order['pet_id'] ?></td>
                               <td><?= $order['name'] ?></td>
@@ -64,8 +64,6 @@
 
                         <thead>
                           <tr>
-                            <td></td>
-                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>

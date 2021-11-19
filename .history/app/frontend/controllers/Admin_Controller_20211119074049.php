@@ -97,19 +97,18 @@
         } 
 
         function order() {
-            $data = [ 'order' => $this->model->admin->loadOrder()];
-            $this->view->load_view('admin/order', $data);
+            // $data = [ 'order' => $this->model->admin->loadOrder()];
+            $this->view->load_view('admin/order');
         } 
 
         function orderDetail() {
-            $order_id = $_GET['id'];
-            $user_id = $_GET['user_id'];
-            $data =[ 
-                'orderDetail' => $this->model->admin->loadOrderDetail($order_id),
-                'user' => $this->model->admin->get_user_by_id($user_id)
-            ];
-            // var_dump($data['user']);exit;
-            $this->view->load_view('admin/orderDetail', $data);
+            // $order_id = $_GET['id'];
+            // $user_id = $_GET['user_id'];
+            // $data =[ 
+            //     'orderDetail' => $this->model->admin->loadOrderDetail($order_id),
+            //     'user' => $this->model->admin->get_user_by_id($user_id)
+            // ];
+            $this->view->load_view('admin/orderDetail');
         } 
 
         function delete() {

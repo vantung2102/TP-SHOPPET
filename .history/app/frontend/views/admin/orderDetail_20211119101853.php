@@ -44,20 +44,16 @@
                             <th>Tổng tiền</th>
                           </tr>
                         </thead>
-                        <?php $total = 0; $index = 0?>
-                        <?php foreach ($data['orderDetail'] as $order): 
-                              $index++;
-                              $total = $total + $order['price'];
-                        ?>
+                        <?php foreach ($data['orderDetail'] as $data): ?>
                           <tbody>
                             <tr>
-                              <td><?= $index ?></td>
-                              <td><?= $order['order_id'] ?></td>
-                              <td><?= $order['pet_id'] ?></td>
-                              <td><?= $order['name'] ?></td>
-                              <td><?= $order['price'] ?></td>
-                              <td><?= $order['num'] ?></td>
-                              <td><?= $order['price'] *  $order['num']?></td>
+                              <td>1</td>
+                              <td><?= $data['order_id'] ?></td>
+                              <td><?= $data['pet_id'] ?></td>
+                              <td><?= $data['name'] ?></td>
+                              <td><?= $data['price'] ?></td>
+                              <td><?= $data['num'] ?></td>
+                              <td><?= $data['price'] *  $data['num']?></td>
                             </tr>
                           </tbody>
                         <?php endforeach;?>
@@ -67,10 +63,8 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
                             <th>Thành tiền</th>
-                            <th><?= $total?></th>
+                            <th>12000000</th>
                           </tr>
                         </thead>
                       </table>
@@ -102,7 +96,7 @@
                               <th>Tên</th>
                               <th><?= $key['name'] ?></th>
                             </tr>
-                          </tbody>
+                          <!-- </tb> -->
                           <tbody>
                             <tr>
                               <td>Địa chỉ</td>

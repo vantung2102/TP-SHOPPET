@@ -70,7 +70,7 @@
                     ":name" => $data->name,
                     ":num" => $data->number,
                     ":price" => $data->price_new,
-                    ":total_money" => ($data->number)*($data->price_new)
+                    ":total_money" => $data->number*$data->price_new
                 ]);
             }
             $sth->closeCursor();

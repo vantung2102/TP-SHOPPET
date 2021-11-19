@@ -179,26 +179,8 @@
             return $data;
         }
 
-        function loadOrderDetail($order_id){
-            $query = "select * from {$this->table_orderDetail} where order_id = :order_id";
-            $sth = $this->db->prepare($query); 
-            $sth->execute([
-                ":order_id" => $order_id
-            ]);
-            $data = $sth->fetchAll(PDO::FETCH_ASSOC);
-            $sth->closeCursor();
-            return $data;
-        }
+        function loadOrderDetail(){
 
-        function get_user_by_id($user_id){
-            $query = "select * from {$this->table_user} where id = :id";
-            $sth = $this->db->prepare($query); 
-            $sth->execute([
-                ":id" => $user_id
-            ]);
-            $data = $sth->fetchAll(PDO::FETCH_ASSOC);
-            $sth->closeCursor();
-            return $data;
         }
        
     }

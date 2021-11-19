@@ -84,7 +84,7 @@
                           <th>Thao tác</th>
                         </tr>
                       </thead>
-                      <?php foreach ($data['order'] as $data): $id = $data['id']; $user_id = $data['user_id']; $index = 1; ?>
+                      <?php foreach ($data['order'] as $data): $id = $data['id']; $id = $data['id']; $index = 1; ?>
                       <tbody>
                         <tr>
                           <td><?= $index?></td>
@@ -94,9 +94,9 @@
                           <td><?= $data['email']?></td>
                           <td><?= $data['address']?></td>
                           <!-- <td></td> -->
-                          <td><?= $data['order_date']?></td>
+                          <td><?= $data['date']?></td>
                           <td>
-                            <a href="<?= base_url("admin/orderDetail?id=$id?user_id=$user_id") ?>">
+                            <a href="<?= base_url("admin/orderDetail?id=$id") ?>">
                               <button
                                 type="submit"
                                 class="btn btn-icon btn-sm"
@@ -123,7 +123,7 @@
                           </td>
                         </tr>
                       </tbody>
-                      <?php endforeach;?>
+                      <?php endforeach?>
                     </table>
                   </div>
                 </div>

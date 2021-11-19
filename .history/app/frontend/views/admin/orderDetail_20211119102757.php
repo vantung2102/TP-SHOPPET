@@ -44,14 +44,10 @@
                             <th>Tổng tiền</th>
                           </tr>
                         </thead>
-                        <?php $total = 0; $index = 0?>
-                        <?php foreach ($data['orderDetail'] as $order): 
-                              $index++;
-                              $total = $total + $order['price'];
-                        ?>
+                        <?php foreach ($data['orderDetail'] as $order): ?>
                           <tbody>
                             <tr>
-                              <td><?= $index ?></td>
+                              <td>1</td>
                               <td><?= $order['order_id'] ?></td>
                               <td><?= $order['pet_id'] ?></td>
                               <td><?= $order['name'] ?></td>
@@ -67,10 +63,8 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
                             <th>Thành tiền</th>
-                            <th><?= $total?></th>
+                            <th>12000000</th>
                           </tr>
                         </thead>
                       </table>

@@ -79,24 +79,24 @@
                           <th>SĐT</th>
                           <th>Email</th>
                           <th>Địa chỉ</th>
-                          <!-- <th>Tổng tiền</th> -->
+                          <th>Tổng tiền</th>
                           <th>Ngày tạo đơn</th>
                           <th>Thao tác</th>
                         </tr>
                       </thead>
-                      <?php foreach ($data['order'] as $data): $id = $data['id']; $user_id = $data['user_id']; $index = 1; ?>
+                      <?php foreach ($data['pet'] as $data): $id = $data['id']; ?>
                       <tbody>
                         <tr>
-                          <td><?= $index?></td>
-                          <td><?= $data['id']?></td>
-                          <td><?= $data['name']?></td>
-                          <td><?= $data['phone']?></td>
-                          <td><?= $data['email']?></td>
-                          <td><?= $data['address']?></td>
-                          <!-- <td></td> -->
-                          <td><?= $data['order_date']?></td>
+                          <td>1</td>
+                          <td>A30</td>
+                          <td>Le Văn Tùng</td>
+                          <td>00000000</td>
+                          <td>aa@gmail.com</td>
+                          <td>TPHCM</td>
+                          <td>9999999</td>
+                          <td>12/45/23</td>
                           <td>
-                            <a href="<?= base_url("admin/orderDetail?id=$id?user_id=$user_id") ?>">
+                            <a href="<?= base_url('admin/orderDetail?id=$id') ?>">
                               <button
                                 type="submit"
                                 class="btn btn-icon btn-sm"
@@ -123,7 +123,7 @@
                           </td>
                         </tr>
                       </tbody>
-                      <?php endforeach;?>
+                      <?php endforeach?>
                     </table>
                   </div>
                 </div>

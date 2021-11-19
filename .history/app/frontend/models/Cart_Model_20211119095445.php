@@ -67,10 +67,10 @@
                     ":order_id" => $order_id,
                     ":pet_id" => $data->id,
                     ":product_id" => 1,
-                    ":name" => $data->name,
-                    ":num" => $data->number,
-                    ":price" => $data->price_new,
-                    ":total_money" => ($data->number)*($data->price_new)
+                    ":name" => "f",
+                    ":num" => 1,
+                    ":price" => 1,
+                    ":total_money" => 1
                 ]);
             }
             $sth->closeCursor();

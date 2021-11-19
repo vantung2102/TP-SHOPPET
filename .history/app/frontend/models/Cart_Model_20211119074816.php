@@ -17,8 +17,8 @@
         }
 
         function insertOrders() {
-            $query = "insert into {$this->table_order} (user_id, name, email, phone, address, order_date, status, total_money)
-                    values(:user_id, :name, :email, :phone, :address, :order_date, :status, :total_money)";
+            $query = "insert into {$this->table_order} (user_id, name, email, phone, order_date, status, total_money)
+                    values(:user_id, :name, :email, :phone, :order_date, :status, :total_money)";
             $dataUser = $this->getUser();
             $sth = $this->db->prepare($query);
             // var_dump($sth);exit;
@@ -28,7 +28,6 @@
                 ":name" => $dataUser['name'],
                 ":email" =>$dataUser['email'],
                 ":phone" =>$dataUser['phone'],
-                ":address" =>$dataUser['address'],
                 ":order_date" => date('d.m.y'),
                 ":status" =>1,
                 ":total_money"=>""
@@ -54,25 +53,17 @@
             foreach ($carts as $data ) {
                 $sth = $this->db->prepare($query);
                 var_dump($data);
-                // $sth->execute([
-                //     ":order_id" => 180,
-                //     ":pet_id" => $data['id'],
-                //     ":product_id" => 1,
-                //     ":name" => $data->name,
-                //     ":num" => $data->number,
-                //     ":price" => $data->price_new,
-                //     ":total_money" => $data->price_new * $data->number
-                // ]);
                 $sth->execute([
                     ":order_id" => $order_id,
-                    ":pet_id" => $data->id,
+                    ":pet_id" => $data['id'],
                     ":product_id" => 1,
                     ":name" => $data->name,
                     ":num" => $data->number,
                     ":price" => $data->price_new,
-                    ":total_money" => ($data->number)*($data->price_new)
+                    ":total_money" => $data->price_new * $data->number
                 ]);
             }
             $sth->closeCursor();
+
         }
     }

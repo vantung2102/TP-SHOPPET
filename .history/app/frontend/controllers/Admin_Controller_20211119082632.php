@@ -108,7 +108,6 @@
                 'orderDetail' => $this->model->admin->loadOrderDetail($order_id),
                 'user' => $this->model->admin->get_user_by_id($user_id)
             ];
-            // var_dump($data['user']);exit;
             $this->view->load_view('admin/orderDetail', $data);
         } 
 

@@ -67,8 +67,6 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
                             <th>Thành tiền</th>
                             <th><?= $total?></th>
                           </tr>

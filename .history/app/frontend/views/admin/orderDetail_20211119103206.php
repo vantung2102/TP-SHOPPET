@@ -51,7 +51,7 @@
                         ?>
                           <tbody>
                             <tr>
-                              <td><?= $index ?></td>
+                              <td>1</td>
                               <td><?= $order['order_id'] ?></td>
                               <td><?= $order['pet_id'] ?></td>
                               <td><?= $order['name'] ?></td>
@@ -67,10 +67,8 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
                             <th>Thành tiền</th>
-                            <th><?= $total?></th>
+                            <th>12000000</th>
                           </tr>
                         </thead>
                       </table>

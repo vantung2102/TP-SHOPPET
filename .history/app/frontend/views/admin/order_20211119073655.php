@@ -94,7 +94,7 @@
                           <td><?= $data['email']?></td>
                           <td><?= $data['address']?></td>
                           <!-- <td></td> -->
-                          <td><?= $data['order_date']?></td>
+                          <td><?= $data['date']?></td>
                           <td>
                             <a href="<?= base_url("admin/orderDetail?id=$id?user_id=$user_id") ?>">
                               <button
