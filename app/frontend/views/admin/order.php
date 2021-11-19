@@ -81,6 +81,7 @@
                           <th>Địa chỉ</th>
                           <!-- <th>Tổng tiền</th> -->
                           <th>Ngày tạo đơn</th>
+                          <th>Trạng thái</th>
                           <th>Thao tác</th>
                         </tr>
                       </thead>
@@ -95,6 +96,12 @@
                           <td><?= $data['address']?></td>
                           <!-- <td></td> -->
                           <td><?= $data['order_date']?></td>
+
+                          <?php if($data['status'] == 1):?>
+                            <td>Chưa giao</td>
+                          <?php else: ?>
+                            <td>Đã giao</td>
+                          <?php endif; ?>
                           <td>
                             <a href="<?= base_url("admin/orderDetail?id=$id?user_id=$user_id") ?>">
                               <button
@@ -104,21 +111,6 @@
                               >
                                 <i class="fa fa-eye"></i>
                             </a>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm"
-                              title="Edit"
-                            >
-                              <i class="fa fa-edit"></i>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-icon btn-sm js-sweetalert"
-                              title="Delete"
-                              data-type="confirm"
-                            >
-                              <i class="fa fa-trash text-danger"></i>
                             </button>
                           </td>
                         </tr>

@@ -210,4 +210,16 @@
             $this->model->admin->processUpload($data);
             $this->index();
         }
+
+        function checkOrder(){
+            $order_id = $_GET['order_id'];
+            $this->model->admin->checkOrder($order_id);
+            $this->order();
+        }
+
+        function deleteOrder(){
+            $order_id = $_GET['order_id'];
+            $this->model->admin->deleteOrder($order_id);
+            $this->order();
+        }
     }

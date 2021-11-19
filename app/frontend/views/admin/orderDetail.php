@@ -46,6 +46,7 @@
                         </thead>
                         <?php $total = 0; $index = 0?>
                         <?php foreach ($data['orderDetail'] as $order): 
+                              $order_id = $order['order_id'];
                               $index++;
                               $total = $total + $order['price'];
                         ?>
@@ -124,16 +125,18 @@
                           <tbody>
                             <tr>
                               <td>
-                              <button
-                                  type="button"
-                                  class="btn btn-icon btn-sm"
-                                  title="Chấp nhận"
-                                >
-                                  <i class="fa fa-edit"></i>
-                                </button>
+                                <a href="<?= base_url("admin/checkOrder?order_id=$order_id") ?>">
+                                  <button
+                                      type="button"
+                                      class="btn btn-icon btn-sm"
+                                      title="Chấp nhận"
+                                    >
+                                    <i class="far fa-calendar-check"></i>
+                                    </button>
+                                </a>
                               </td>
                               <td>
-                                
+                              <a href="<?= base_url("admin/deleteOrder?order_id=$order_id") ?>">
                                 <button
                                   type="button"
                                   class="btn btn-icon btn-sm js-sweetalert"
@@ -142,6 +145,7 @@
                                 >
                                   <i class="fa fa-trash text-danger"></i>
                                 </button>
+                              </a>
                               </td>
                             </tr>
                           </tbody>

@@ -131,11 +131,13 @@ $(document).ready(function () {
       data: { carts: JSON.stringify(carts) },
       url: "http://localhost/tp&shoppet/?module=cart&action=get_product_ajax",
       success: function (response) {
-        // if (response.status == "401") {
-        //   alert("You must login !");
-        // } else {
-        //   alert("You payment successfully !");
-        // }
+        if (response.status == "401") {
+          alert("Bạn phải đăng nhập mới mua được !");
+        } else {
+          window.location.replace(obj.baseUrl("cart/cart"));
+          alert("Bạn mua thành công !");
+          JSON.parse(localStorage.removeItem("carts"));
+        }
         console.log(response);
       },
       error: function (error) {

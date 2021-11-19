@@ -171,7 +171,7 @@
 
         function loadOrder(){
 
-            $query = "select * from {$this->table_order}";
+            $query = "select * from {$this->table_order} ORDER BY status DESC";
             $sth = $this->db->prepare($query); 
             $sth->execute();
             $data = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -199,6 +199,35 @@
             $data = $sth->fetchAll(PDO::FETCH_ASSOC);
             $sth->closeCursor();
             return $data;
+        }
+
+        function checkOrder($id_order){
+            $query = "update {$this->table_order} set status = :status where id = :id";
+            $sth = $this->db->prepare($query); 
+            $sth->execute([
+                ":id" => $id_order,
+                ":status" => 0
+            ]);
+            $sth->closeCursor();
+        }
+
+        function deleteOrder($id_order){
+            $query = "delete from {$this->table_orderDetail} where order_id = :order_id";
+            $query_2 = "delete from {$this->table_order} where id = :id";
+
+            $sth = $this->db->prepare($query); 
+            $sth_2 = $this->db->prepare($query_2); 
+            
+            $sth->execute([
+                ":order_id" => $id_order,
+            ]);
+            $sth_2->execute([
+                ":id" => $id_order,
+            ]);
+
+            $sth->closeCursor();
+            $sth_2->closeCursor();
+
         }
        
     }

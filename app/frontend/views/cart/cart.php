@@ -114,7 +114,7 @@
                                 <!-- <sup>đ</sup>0 -->
                             </div>
                         </div>
-                        <button type="submit" class="product-cart__buy clickCart">Mua hàng</button>
+                        <button type="submit" class="product-cart__buy clickCart">Thanh toán</button>
                     </div>
                 </div>
             </div>
