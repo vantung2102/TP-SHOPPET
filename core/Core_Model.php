@@ -1,34 +1,36 @@
 <?php
 
-    class Core_Model{
+class Core_Model
+{
 
-        protected $db;
+    protected $db;
 
-        function __construct(){
-            $this->connectDB();
+    function __construct()
+    {
+        $this->connectDB();
+    }
+
+    function connectDB()
+    {
+        $database_path = BASE_PATH . '/config/database.php';
+
+        if (!file_exists($database_path)) {
+            exit("File database not found $database_path");
         }
 
-        function connectDB(){
-            $database_path = BASE_PATH . '/config/database.php';
+        $config = require($database_path);
 
-            if (!file_exists($database_path)) {
-                exit("File database not found $database_path");
-            }
+        $host = $config['host'];
+        $user = $config['user'];
+        $password = $config['password'];
+        $dbname = $config['dbname'];
 
-            $config = require($database_path);
-
-            $host = $config['host'];
-            $user = $config['user'];
-            $password = $config['password'];
-            $dbname = $config['dbname'];
-
-            try {
-                $this->db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
-                $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $this->db->exec("set names utf8");
-            } 
-            catch (Exception $e) {
-                exit("Connection fail: " . $e->getMessage());
-            }
+        try {
+            $this->db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->db->exec("set names utf8");
+        } catch (Exception $e) {
+            exit("Connection fail: " . $e->getMessage());
         }
     }
+}

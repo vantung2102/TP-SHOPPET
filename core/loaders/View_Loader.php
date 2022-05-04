@@ -1,31 +1,34 @@
 <?php
 
-    class View_Loader{
+class View_Loader
+{
 
-        protected $content = [];
+    protected $content = [];
 
-        function load_view($view, $data = []){
+    function load_view($view, $data = [])
+    {
 
-            extract($data);
+        extract($data);
 
-            $view_path = APP_PATH . "/views/{$view}.php";
+        $view_path = APP_PATH . "/views/{$view}.php";
 
-            if (!file_exists($view_path)) {
-                exit("File not found $view_path");
-            }
-
-            ob_start();
-
-            require($view_path);  
-
-            $this->content[] = ob_get_contents();
-
-            ob_end_clean();
+        if (!file_exists($view_path)) {
+            exit("File not found $view_path");
         }
 
-        function show() {
-            foreach ($this->content as $content){
-                echo $content;
-            }
+        ob_start();
+
+        require($view_path);
+
+        $this->content[] = ob_get_contents();
+
+        ob_end_clean();
+    }
+
+    function show()
+    {
+        foreach ($this->content as $content) {
+            echo $content;
         }
     }
+}
