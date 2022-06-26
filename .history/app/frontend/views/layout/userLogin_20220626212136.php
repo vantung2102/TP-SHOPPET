@@ -23,8 +23,8 @@
     echo "<script>alert('Email đã tồn tại')</script>";
   } elseif (isset($_GET['registration']) && $_GET['registration'] == 4) {
     echo "<script>alert('Mật khẩu ít nhất 6 ký tự')</script>";
-  } elseif (isset($_GET['registration']) && $_GET['registration'] == 5) {
-    echo "<script>alert('Email không hợp lệ')</script>";
+  } elseif (isset($_GET['registration']) && $_GET['registration'] == 4) {
+    echo "<script>alert('Mật khẩu ít nhất 6 ký tự')</script>";
   }
   // login
   if (isset($_GET['success']) && $_GET['success'] == 1) {

@@ -460,7 +460,7 @@ $(document).ready(function () {
     const idProduct = $this.closest(".product-cart__list").attr("id");
     const $button = $this.siblings(".input--amount");
 
-    if (e.target.value <= 0 || typeof e.target.value != "number") {
+    if (e.target.value <= 0) {
       e.target.value = 1;
     }
 

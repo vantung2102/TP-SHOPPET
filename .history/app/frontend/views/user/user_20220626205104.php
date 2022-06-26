@@ -108,6 +108,72 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!---Địa chỉ-->
+                        <!-- <div class="boxDetailInfo user_my-address">
+              <div class="address-detail">
+                <div class="row user-address">
+                  <div class="l-12">
+                    <div class="address-detail-infor">
+                    <form action="<?= base_url('user/changeInfo') ?>" id="form_personal-infor" method="post">
+                    <div class="information_input">
+                      <label for="Fullname" class="information_input-title"
+                        >Họ tên</label
+                      >
+                      <input
+                        type="text"
+                        name="name"
+                        value="<?= $data['name'] ?>"
+                        id="Fullname"
+                        placeholder="Họ tên của bạn"
+                        class="input-value"
+                      />
+                      <label for="birthday" class="information_input-title"
+                        >Ngày sinh</label
+                      >
+                      <input
+                        type="date"
+                        name="birthday"
+                        value="<?= $data['birthday'] ?>"
+                        id="birthday"
+                        class="input-value"
+                      />
+                      <label for="sex" class="information_input-title"
+                        >Giới tính</label
+                      >
+                      <div id="information_input-sex">
+                        <input type="radio" name="gender" value="nam" />
+                        <label for="male">Nam</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          id="female"
+                          value="nữ"
+                          class="information_input-sex--item"
+                        />
+                        <label for="female">Nữ</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="khác"
+                          id="another"
+                          class="information_input-sex--item"
+                        />
+                        <label for="another">Khác</label>
+                      </div>
+                    </div>
+                    <div class="btn_save-change">
+                      <button type="submit">Lưu thay đổi</button>
+                    </div>
+                  </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
                     <?php endforeach; ?>
                     <!--Đổi mật khẩu-->
                     <div class="boxDetailInfo user-password">

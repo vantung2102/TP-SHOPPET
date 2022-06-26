@@ -16,6 +16,7 @@ class Login_Controller extends Base_Controller
 
     function checkValidateEmail($email)
     {
+        $email = test_input($_POST["email"]);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
         }
@@ -27,31 +28,27 @@ class Login_Controller extends Base_Controller
             redirect('login/login?registration=0');
         } else {
 
-            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                redirect('login/login?registration=5');
+            if ($this->model->login->checkEmail($_POST['email']) == true) {
+                redirect('login/login?registration=3');
             } else {
-                if ($this->model->login->checkEmail($_POST['email']) == true) {
-                    redirect('login/login?registration=3');
+
+                if (strlen($_POST['password']) < 6) {
+                    redirect('login/login?registration=4');
                 } else {
 
-                    if (strlen($_POST['password']) < 6) {
-                        redirect('login/login?registration=4');
+                    $password =  hash_password_md5($_POST['password']);
+                    $re_password = hash_password_md5($_POST['re_password']);
+                    if ($password == $re_password) {
+                        $data = [
+                            'name' => $_POST['name'],
+                            'email' => $_POST['email'],
+                            'phone' => $_POST['phone'],
+                            'password' => hash_password_md5($_POST['password']),
+                        ];
+                        $this->model->login->insertUser($data);
+                        redirect('login/login?registration=2');
                     } else {
-
-                        $password =  hash_password_md5($_POST['password']);
-                        $re_password = hash_password_md5($_POST['re_password']);
-                        if ($password == $re_password) {
-                            $data = [
-                                'name' => $_POST['name'],
-                                'email' => $_POST['email'],
-                                'phone' => $_POST['phone'],
-                                'password' => hash_password_md5($_POST['password']),
-                            ];
-                            $this->model->login->insertUser($data);
-                            redirect('login/login?registration=2');
-                        } else {
-                            redirect('login/login?registration=1');
-                        }
+                        redirect('login/login?registration=1');
                     }
                 }
             }

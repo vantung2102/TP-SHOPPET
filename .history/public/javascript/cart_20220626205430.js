@@ -172,11 +172,7 @@ $(document).ready(function () {
           window.location.replace(obj.baseUrl("login/login"));
           alert("Bạn phải đăng nhập mới mua được !");
         } else {
-          if (
-            confirm(
-              "Vui lòng nhập đầy đủ thông tin trên trang cá nhân để xác nhận muôn mua hàng!"
-            )
-          ) {
+          if (confirm("Bạn có muốn mua !")) {
             window.location.replace(obj.baseUrl("cart/cart"));
             alert("Bạn mua thành công !");
             JSON.parse(localStorage.removeItem("carts"));
@@ -460,7 +456,7 @@ $(document).ready(function () {
     const idProduct = $this.closest(".product-cart__list").attr("id");
     const $button = $this.siblings(".input--amount");
 
-    if (e.target.value <= 0 || typeof e.target.value != "number") {
+    if (e.target.value <= 0) {
       e.target.value = 1;
     }
 

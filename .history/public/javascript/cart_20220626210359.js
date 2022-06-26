@@ -459,10 +459,12 @@ $(document).ready(function () {
   function inputItem(e, $this) {
     const idProduct = $this.closest(".product-cart__list").attr("id");
     const $button = $this.siblings(".input--amount");
+    console.log(e.target.value);
 
     if (e.target.value <= 0 || typeof e.target.value != "number") {
       e.target.value = 1;
     }
+    debugger;
 
     const inputItem = carts.find((res) => res.id == idProduct);
 

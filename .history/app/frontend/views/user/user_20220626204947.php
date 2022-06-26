@@ -2,45 +2,44 @@
     <div class="grid wide">
         <div class="row">
             <!--Slide bar-->
-            <?php foreach ($data['user'] as $data) : ?>
-                <div class="col l-3">
-                    <div class="user_infor">
-                        <div class="user_profile">
-                            <img src="<?= load_images('icon', 'user.png') ?>" alt="" class="user_profile-img" />
-                            <div class="user_profile-name"><?= $data['name'] ?></div>
-                        </div>
-                        <div class="user_manage">
-                            <ul class="manage_acount">
-                                <div class="manage-title">Tài khoản của tôi</div>
-                                <li class="manage_acount-item arrtitle active">
-                                    <i class="manage-icon fas fa-user"></i>
-                                    <div class="manage_acount-text">Thông tin cá nhân</div>
-                                </li>
-                                <li class="manage_acount-item arrtitle">
-                                    <i class="manage-icon fas fa-key"></i>
-                                    <div class="manage_acount-text">Đổi mật khẩu</div>
-                                </li>
-                            </ul>
-                            <ul class="manage_order">
-                                <div class="manage-title">Đơn hàng của tôi</div>
-                                <li class="manage_order-item arrtitle">
-                                    <i class="manage-icon far fa-list-alt"></i>
-                                    <div class="manage_acount-text">Đơn hàng</div>
-                                </li>
-                                <li class="manage_order-item arrtitle">
-                                    <i class="manage-icon fas fa-bell"></i>
-                                    <div class="manage_acount-text">Thông báo</div>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="col l-3">
+                <div class="user_infor">
+                    <div class="user_profile">
+                        <img src="<?= load_images('icon', 'user.png') ?>" alt="" class="user_profile-img" />
+                        <div class="user_profile-name">Thanh Tâm</div>
+                    </div>
+                    <div class="user_manage">
+                        <ul class="manage_acount">
+                            <div class="manage-title">Tài khoản của tôi</div>
+                            <li class="manage_acount-item arrtitle active">
+                                <i class="manage-icon fas fa-user"></i>
+                                <div class="manage_acount-text">Thông tin cá nhân</div>
+                            </li>
+                            <li class="manage_acount-item arrtitle">
+                                <i class="manage-icon fas fa-key"></i>
+                                <div class="manage_acount-text">Đổi mật khẩu</div>
+                            </li>
+                        </ul>
+                        <ul class="manage_order">
+                            <div class="manage-title">Đơn hàng của tôi</div>
+                            <li class="manage_order-item arrtitle">
+                                <i class="manage-icon far fa-list-alt"></i>
+                                <div class="manage_acount-text">Đơn hàng</div>
+                            </li>
+                            <li class="manage_order-item arrtitle">
+                                <i class="manage-icon fas fa-bell"></i>
+                                <div class="manage_acount-text">Thông báo</div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+            </div>
 
-                <!--Contain-->
-                <div class="col l-9">
-                    <div class="user_contain">
-                        <!--Thong tin ca nhan-->
-
+            <!--Contain-->
+            <div class="col l-9">
+                <div class="user_contain">
+                    <!--Thong tin ca nhan-->
+                    <?php foreach ($data['user'] as $data) : ?>
                         <div class="boxDetailInfo active user_my-information">
                             <div class="user_my-information-title">
                                 <h3 class="user_my-information-title-item">Thông tin cá nhân</h3>
@@ -108,6 +107,72 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!---Địa chỉ-->
+                        <!-- <div class="boxDetailInfo user_my-address">
+              <div class="address-detail">
+                <div class="row user-address">
+                  <div class="l-12">
+                    <div class="address-detail-infor">
+                    <form action="<?= base_url('user/changeInfo') ?>" id="form_personal-infor" method="post">
+                    <div class="information_input">
+                      <label for="Fullname" class="information_input-title"
+                        >Họ tên</label
+                      >
+                      <input
+                        type="text"
+                        name="name"
+                        value="<?= $data['name'] ?>"
+                        id="Fullname"
+                        placeholder="Họ tên của bạn"
+                        class="input-value"
+                      />
+                      <label for="birthday" class="information_input-title"
+                        >Ngày sinh</label
+                      >
+                      <input
+                        type="date"
+                        name="birthday"
+                        value="<?= $data['birthday'] ?>"
+                        id="birthday"
+                        class="input-value"
+                      />
+                      <label for="sex" class="information_input-title"
+                        >Giới tính</label
+                      >
+                      <div id="information_input-sex">
+                        <input type="radio" name="gender" value="nam" />
+                        <label for="male">Nam</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          id="female"
+                          value="nữ"
+                          class="information_input-sex--item"
+                        />
+                        <label for="female">Nữ</label>
+
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="khác"
+                          id="another"
+                          class="information_input-sex--item"
+                        />
+                        <label for="another">Khác</label>
+                      </div>
+                    </div>
+                    <div class="btn_save-change">
+                      <button type="submit">Lưu thay đổi</button>
+                    </div>
+                  </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
                     <?php endforeach; ?>
                     <!--Đổi mật khẩu-->
                     <div class="boxDetailInfo user-password">
@@ -187,8 +252,8 @@
                             </div>
                         </div>
                     </div>
-                    </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>

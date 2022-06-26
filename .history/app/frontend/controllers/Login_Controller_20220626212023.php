@@ -28,7 +28,7 @@ class Login_Controller extends Base_Controller
         } else {
 
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                redirect('login/login?registration=5');
+                redirect('login/login?registration=3');
             } else {
                 if ($this->model->login->checkEmail($_POST['email']) == true) {
                     redirect('login/login?registration=3');
